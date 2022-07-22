@@ -7,7 +7,7 @@
 <div>
  
    <p>
-    Texto
+    CODE.IO é uma aplicação SPA desenvolvida para consumir a API que desenvolvi: [code.io.api](https://github.com/Edssaac/code.io.api)
    </p>
   
 </div>
