@@ -1,6 +1,6 @@
 <div align="center">
 
-  ![code.io](https://raw.githubusercontent.com/Edssaac/code.io/main/public/images/code.io.png?token=GHSAT0AAAAAABJM5EC2RX74GYQY3TXDZLMQYW2VDJQ)
+  <img src="https://raw.githubusercontent.com/Edssaac/code.io/main/public/images/code.io.png?token=GHSAT0AAAAAABJM5EC2RX74GYQY3TXDZLMQYW2VDJQ" height="150">
   
 </div>
 
