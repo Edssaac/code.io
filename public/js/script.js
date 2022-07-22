@@ -48,7 +48,7 @@ function criarCards(videos) {
     // Criando um card para cada vídeo cadastrado:
     for (var video of videos) {
         cardGroup += `<div class="col">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-header">${video.titulo}</div>
                 <div class="card-body">
                     <div class="videoWrapper">
