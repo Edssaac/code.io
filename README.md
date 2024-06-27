@@ -1,23 +1,27 @@
-<div align="center">
+## Apresentação Geral
 
-  <img src="https://raw.githubusercontent.com/Edssaac/code.io/main/public/images/code.io.png?token=GHSAT0AAAAAABJM5EC2RX74GYQY3TXDZLMQYW2VDJQ" height="150">
-  
-</div>
+**Nome do Projeto:** Code.IO
 
-<br>
+**Descrição:**
 
-<div>
- 
-  CODE.IO é uma aplicação SPA desenvolvida para consumir e interagir com a minha API: [code.io.api](https://github.com/Edssaac/code.io.api) <br>
-  O escopo da plataforma é o compartilhamento de vídeos relacionados a tecnologia pelos usuários, sendo possível cadastrar, editar, remover, ou simplesmente assistir os vídeos. <br>
-  Este projeto tem apenas objetivos de aprendizado.
-  
-</div>
+Code.IO é um aplicativo SPA criado para interagir com a minha API: [code.io.api](https://github.com/Edssaac/code.io.api). 
+A plataforma permite aos usuários compartilhar vídeos relacionados à tecnologia, oferecendo funcionalidades para cadastro, 
+edição, remoção e visualização de vídeos. Este projeto tem como principal objetivo proporcionar aprendizado e prática no 
+desenvolvimento de aplicações web.
 
-<br>
+![demo](https://raw.githubusercontent.com/Edssaac/code.io/main/public/images/demo/code.io.gif)
 
-<div align="center">
+**Objetivo:**
 
-  ![code.io](https://raw.githubusercontent.com/Edssaac/code.io/main/public/images/codeio.gif?token=GHSAT0AAAAAABJM5EC37ZF7N63O56GOK45EYW2VDLQ)
-  
-</div>
+Implementar uma SPA para integrar e consumir a minha API, visando oferecer uma experiência otimizada e responsiva aos usuários finais.
+
+**Tecnologias Utilizadas:**
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JAVASCRIPT](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+## Documentação da API
+
+[![documentation](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)](https://github.com/Edssaac/code.io.api/tree/main/system/documentation)
+
