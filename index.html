@@ -6,17 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/main.css">
+
     <script src="public/js/jquery-3.6.0.min.js" defer></script>
     <script src="public/js/bootstrap.bundle.min.js" defer></script>
-    <script src="public/js/script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="public/js/main.js" defer></script>
 
-
-    <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="public/images/tech.png" type="image/png">
 
     <title>code.io</title>
 </head>
@@ -29,7 +27,7 @@
             <div class="col">
                 <div class="logoWrapper">
                     <div>
-                        <img src="public/images/techcolor.png" alt="LOGO" title="code.io" class="logo">
+                        <img src="public/images/tech.png" alt="LOGO" title="code.io" class="logo">
                     </div>
                     <div>
                         <p class="mb-0">CODE.IO</p>
@@ -37,7 +35,7 @@
                 </div>
             </div>
             <div class="col text-end">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNovo">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNewVideo">
                     <i class="far fa-plus-square"></i> NOVO
                 </button>
             </div>
@@ -47,36 +45,35 @@
     <hr class="text-light mb-5">
 
     <!-- Modal Novo Vídeo -->
-    <div class="modal fade" id="modalNovo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="modalNovoLabel" aria-hidden="true">
+    <div class="modal fade" id="modalNewVideo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalNewVideoLabel">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
-                <form id="frmNovo">
+                <form id="formNewVideo">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalNovoLabel">ADICIONAR NOVO CONTEÚDO</h5>
+                        <h5 class="modal-title" id="modalNewVideoLabel">ADICIONAR NOVO CONTEÚDO</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
                     <div class="modal-body">
                         <div class="form-group mb-3">
-                            <label for="txtTitulo" class="form-label fw-bold">Título</label>
-                            <input type="text" id="txtTitulo" name="txtTitulo" class="form-control">
+                            <label for="title" class="form-label fw-bold">Título</label>
+                            <input type="text" id="title" name="title" class="form-control" minlength="5" maxlength="50" required>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="txtDescricao" class="form-label fw-bold">Descrição</label>
-                            <textarea id="txtDescricao" name="txtDescricao" rows="5" class="form-control"></textarea>
+                            <label for="description" class="form-label fw-bold">Descrição</label>
+                            <textarea id="description" name="description" rows="5" class="form-control" minlength="10" maxlength="500" required></textarea>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="txtVideoId" class="form-label fw-bold">Video ID</label>
-                            <input type="text" id="txtVideoId" name="txtVideoId" class="form-control">
+                            <label for="videoid" class="form-label fw-bold">Video ID</label>
+                            <input type="text" id="videoid" name="videoid" class="form-control" maxlength="11" required>
                         </div>
                     </div>
 
-                    <div class="alert alert-danger d-none" role="alert" id="modalNovoAlert"></div>
+                    <div class="alert alert-danger mx-2 d-none" role="alert" id="modalNewVideoAlert"></div>
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCELAR</button>
-                        <button type="submit" class="btn btn-success" id="btnAdicionar">ADICIONAR</button>
+                        <button type="submit" class="btn btn-success" id="buttonAdd">ADICIONAR</button>
                     </div>
                 </form>
             </div>
@@ -84,9 +81,8 @@
     </div>
 
     <!-- Modal Editar/Visualizar Vídeo -->
-    <div class="modal fade" id="modalVideo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="modalVideoLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal fade" id="modalVideo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalVideoLabel">
+        <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
                 <form id="frmVideo">
                     <div>
@@ -98,29 +94,27 @@
                     </div>
 
                     <div class="modal-body">
-                        <div class="form-group mb-3" id="tituloGrupo">
-                            <label for="txtTituloModalVideo" class="form-label fw-bold">Título</label>
-                            <input type="text" id="txtTituloModalVideo" name="txtTituloModalVideo" class="form-control">
+                        <div class="form-group mb-3 editableContent">
+                            <label for="selectedVideoTitle" class="form-label fw-bold">Título</label>
+                            <input type="text" id="selectedVideoTitle" name="selectedVideoTitle" class="form-control" minlength="5" maxlength="50" required>
                         </div>
                         <div id="iframeVideo" class="form-group mb-3">
                         </div>
-                        <div class="form-group mb-3" id="descricaoGrupo">
-                            <label for="txtDescricaoModalVideo" class="form-label fw-bold">Descrição</label>
-                            <textarea id="txtDescricaoModalVideo" name="txtDescricaoModalVideo" rows="5"
-                                class="form-control"></textarea>
+                        <div class="form-group mb-3">
+                            <label for="selectedVideoDescription" class="form-label fw-bold">Descrição</label>
+                            <textarea id="selectedVideoDescription" name="selectedVideoDescription" rows="5" class="form-control" minlength="10" maxlength="500" required></textarea>
                         </div>
-                        <div class="form-group mb-3" id="videoIdGrupo">
-                            <label for="txtVideoIdModalVideo" class="form-label fw-bold">Video ID</label>
-                            <input type="text" id="txtVideoIdModalVideo" name="txtVideoIdModalVideo"
-                                class="form-control">
+                        <div class="form-group mb-3 editableContent">
+                            <label for="selectedVideoVideoID" class="form-label fw-bold">Video ID</label>
+                            <input type="text" id="selectedVideoVideoID" name="selectedVideoVideoID" class="form-control" maxlength="11" required>
                         </div>
                     </div>
 
-                    <div class="alert alert-danger d-none" role="alert" id="modalVideoAlert"></div>
+                    <div class="alert alert-danger mx-2 d-none" role="alert" id="modalVideoAlert"></div>
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCELAR</button>
-                        <button type="submit" class="btn btn-success" id="btnAtualizar">ATUALIZAR</button>
+                        <button type="submit" class="btn btn-success editableContent" id="buttonUpdate">ATUALIZAR</button>
                     </div>
                 </form>
             </div>
