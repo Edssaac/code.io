@@ -1,10 +1,10 @@
 ## Apresentação Geral
 
-**Nome do Projeto:** Code.IO
+**Nome do Projeto:** code.io
 
 **Descrição:**
 
-Code.IO é um aplicativo SPA criado para interagir com a minha API: [code.io.api](https://github.com/Edssaac/code.io.api). 
+Este é um aplicativo SPA criado para interagir com a minha API: [code.io.api](https://github.com/Edssaac/code.io.api). 
 A plataforma permite aos usuários compartilhar vídeos relacionados à tecnologia, oferecendo funcionalidades para cadastro, 
 edição, remoção e visualização de vídeos. Este projeto tem como principal objetivo proporcionar aprendizado e prática no 
 desenvolvimento de aplicações web.
